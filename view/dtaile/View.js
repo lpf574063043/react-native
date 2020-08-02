@@ -9,7 +9,6 @@ import {
     Getlistinfo ,
     Getvideolist,
     Setrefreshing,
-    Setgetout,
     Changegetout
 } from "./actionscreateator"
 // const { width, height } = Dimensions.get("window")
@@ -37,7 +36,6 @@ class Dtail extends React.Component {
         this.props.getmusic()
         this.props.getlistinfo()
         this.props.getvideolist(14)
-        // this.props.setrefreshing(this.props.refreshingS)
     }
     _onEndReached=()=>{
         this.props.changegetou(this.props.getouts,this.props.listinfo)
@@ -109,7 +107,6 @@ const mapDispath = (dispath, props) => {
             dispath(Getmusic())
         },
         getlistinfo(res) {
-            // console.log(res)
             let list = [
                 {
                     title: "披萨001",

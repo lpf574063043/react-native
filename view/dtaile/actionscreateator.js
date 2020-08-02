@@ -72,7 +72,6 @@ export const Setgetout = (res) => {
     }
 }
 export const Changegetout = (str, list) => {
-    // console.log(str,list)
     return (dispath) => {
         if (str !== "上拉加载更多") { return } else {
             dispath(Setgetout("加载中..."))
@@ -84,13 +83,13 @@ export const Changegetout = (str, list) => {
                         src: "https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00063-1311.jpg"
                     }
                 ]
-               let arr2=list.concat(arr)
+                let arr2 = list.concat(arr)
                 dispath(Getlistinfo(arr2))
                 // dispath(action)
                 dispath(Setgetout("上拉加载更多"))
                 return
             }, 2000);
-               
+
         }
     }
 }
